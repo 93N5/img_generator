@@ -6,6 +6,8 @@ node_modules
 pd_data
 pd_migrations
 src/lib
+cred.js
+cred.js.*
 .env
 .env.*
 !.env.example
