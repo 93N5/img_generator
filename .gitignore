@@ -3,6 +3,9 @@ node_modules
 /build
 /.svelte-kit
 /package
+pd_data
+pd_migrations
+src/lib
 .env
 .env.*
 !.env.example

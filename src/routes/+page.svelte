@@ -1,6 +1,7 @@
 <script>
   import { currentUser, pb } from '../lib/pocketbase';
   import { Configuration, OpenAIApi } from "openai";
+  import { openai_api_key } from '../lib/cred';
   
   let username;
   let password;
@@ -28,7 +29,7 @@
   let inputUser = '';
   let imageUrl = '';
 
-  const API_KEY = __myapp.env.OPENAI_API_KEY;
+  const API_KEY = openai_api_key;
   
   async function HandleSubmit() {
     const configuration = new Configuration({
@@ -47,14 +48,14 @@
 
   // start OPENAI_API_KEY env var check
   try {
-    if (process.env.OPENAI_API_KEY) {
-      console.log(process.env.OPENAI_API_KEY);
+    if (API_KEY) {
+      console.log('API key found');
     } else {
       throw new Error('API key not found');
     }
   } catch (error) {
     console.error(error.message);
-    process.exit(1);
+    process.exit();
   }
   // end OPENAI_API_KEY env var check
 </script>
