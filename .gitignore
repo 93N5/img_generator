@@ -3,9 +3,9 @@ node_modules
 /build
 /.svelte-kit
 /package
-pd_data
-pd_migrations
-src/lib
+/pd_data
+/pd_migrations
+/src/lib
 cred.js
 cred.js.*
 .env
